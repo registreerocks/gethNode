@@ -4,7 +4,7 @@ services:
     image: "ethereum/client-go:stable"
     restart: always
     container_name: "geth-rinkeby"
-    command: "--rinkeby --rpc --rpcaddr '0.0.0.0' --rpcport 8545 --ws --wsaddr '0.0.0.0' --wsport 8546 --syncmode fast --verbosity 4"
+    command: "--rinkeby --rpc --rpcapi personal,web3 --rpcaddr '0.0.0.0' --rpcport 8545 --ws --wsaddr '0.0.0.0' --wsport 8546 --syncmode fast --verbosity 1"
     volumes:
       - "$HOME/.ethereum-docker/rinkeby/:/root/.ethereum/"
     ports:
